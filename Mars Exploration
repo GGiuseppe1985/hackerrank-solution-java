@@ -1,0 +1,32 @@
+class Result {
+
+    /*
+     * Complete the 'marsExploration' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts STRING s as parameter.
+     */
+
+    public static int marsExploration(String s) {
+    // Write your code here
+    int sum = 0;
+        int i = 0;
+        
+        while(i<s.length()){
+            if(s.charAt(i) != 'S'){
+                sum++;
+            }
+            if(s.charAt(i+1) != 'O'){
+                sum++;
+            }
+            if(s.charAt(i+2) != 'S'){
+                sum++;
+            }
+            i+=3;
+        }
+        
+        return sum;
+
+    }
+
+}
