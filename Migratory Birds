@@ -1,0 +1,30 @@
+class Result {
+
+    /*
+     * Complete the 'migratoryBirds' function below.
+     *
+     * The function is expected to return an INTEGER.
+     * The function accepts INTEGER_ARRAY arr as parameter.
+     */
+
+    public static int migratoryBirds(List<Integer> arr) {
+    // Write your code here
+    int ans = 0;
+    int occurance = 0;
+    int[] as = new int[arr.size()];
+    for(Integer x : arr){
+        as[x-1]  += 1;
+        
+    }
+    for(int i = 0; i < as.length; i++){
+        if(as[i] > occurance){
+            occurance = as[i];
+            ans = i + 1;
+        }
+    }
+    return ans;
+
+
+    }
+
+}
