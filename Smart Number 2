@@ -1,0 +1,8 @@
+public class Solution {
+    public static boolean isSmartNumber(int num) {
+        int val = (int) Math.sqrt(num);    
+        if(num / val == 1)
+            return true;
+        return false;
+    }
+    }
